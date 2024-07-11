@@ -42,7 +42,7 @@ fig.suptitle(f"Mean Dose Rates for {path.split(os.sep)[-1]}", fontweight="bold")
 t = [dr_points[k]["t"] for k in dr_points.keys() if "scan" in k]
 
 for i in range(N_labels):
-    #D = dr_points['D'][1:]
+
     D = [dr_points[k]["D"][str(i+1)] for k in dr_points.keys() if "scan" in k]
 
     # Initialising parameters k1, k2, lambda2 - from which Python then iterates over to find the best fit
